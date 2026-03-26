@@ -1,0 +1,40 @@
+My Ideas
+
+Feature I am responsible for - Group Creation and Shared Task Lists
+Technology for this feature - Flutter UI for group screens and task screens. Firebase Firestore to store groups, members, and group tasks. Firebase Auth for user identity so the app knows who is allowed to view or edit a group. Firestore rules can restrict access to group members only.
+This feature let users create a group, invite friends, and manage tasks together. A user can create a group with name, and then add people by sending an invite link or email. After joining, members can view the shared tasks list and add tasks to it. Shared tasks can show who create the task and who was assigned it. Members can mark tasks complete so the whole group sees progress. The group owner can remove members if needed.
+User story 1: As a user, I want to create a group so I can share tasks with friends for a project or event.
+User story 2: As a group member, I want to view the group task list so I know what the team is working on.
+User story 3: As a group member, I want to add a task to the group so we can track shared work.
+User story 4: As a group member, I want to mark a group task complete so everyone sees the update.
+Resources
+Firebase Firestore docs
+Flutter Firestore plugin
+Flutter Lists and UI basics
+Challenges - Access control and permissions, syncing updates in real time, and making shared tasks not confusing next to personal tasks.
+
+
+
+AI refined Ideas
+
+
+Feature I am responsible for: Group Creation and Shared Task Management in Align
+
+Technology for this feature:
+This feature will be implemented using Flutter for the mobile UI and Firebase as the backend. Firebase Authentication provides a reliable user identity layer, while Firestore stores group records, memberships, and group tasks. Firestore real time listeners can keep shared task lists updated instantly across members, and Firestore Security Rules can enforce access control so only group members can read or write group content.
+
+Services and user stories (150 to 300 words):
+The Group Creation and Shared Task feature enables collaboration by letting users create groups, invite friends, and manage tasks together in a shared space. A user can create a group with a name and optional description, then invite others through email or an invite link. When a user accepts an invite, they become a group member and gain access to the group task board. Group tasks can include due dates, priority levels, and assignment to a specific member to support accountability. Members can create tasks, update task details, and mark tasks as complete, with updates reflected in real time for everyone. To support privacy and organization, shared tasks should be clearly separated from personal tasks, and group owners or admins should be able to remove members or adjust basic group settings.
+
+User story 1: As a user, I want to create a group and invite friends so we can coordinate shared work in one place.
+User story 2: As a group member, I want to view and update shared tasks so everyone stays aligned on progress.
+User story 3: As a group member, I want to assign tasks to specific people so responsibilities are clear.
+User story 4: As a user, I want group tasks separated from personal tasks so I do not confuse what is mine versus shared.
+
+Resources:
+Firebase Firestore Documentation: https://firebase.google.com/docs/firestore (data modeling, queries, security rules)
+FlutterFire Firestore Overview: https://firebase.flutter.dev/docs/firestore/overview/ (setup and code examples for Flutter)
+Flutter Navigation Documentation: https://docs.flutter.dev/ui/navigation (moving between group list, group detail, and task views)
+
+Challenges:
+Key challenges include designing membership and permission logic, preventing unauthorized access through Firestore rules, handling edge cases like deleted groups or removed members, and keeping the UI intuitive as collaboration features add complexity.
